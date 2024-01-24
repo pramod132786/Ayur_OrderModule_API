@@ -11,7 +11,7 @@
 	<groupId>com.anarghya</groupId>
 	<artifactId>OrderModule_API</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>OrderModule_API</name>
+	<name>OrderModule2_API</name>
 	<description>ordermodule project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -47,6 +47,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+      
+</dependency>
+
+   <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.15.2</version>
+</dependency>
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

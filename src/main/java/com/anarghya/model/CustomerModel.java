@@ -4,20 +4,24 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
-@Table(name="customer_Module")
+@Table(name="customermodel")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class CustomerModel {
 	
 	@Id
-	private Integer customerId;
+	private Long customerId;
 	private String customerName;
 	private Long moblieNo;
 	private String emailId;
 	private String password;
-	public Integer getCustomerId() {
+	
+	public Long getCustomerId() {
 		return customerId;
 	}
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 	public String getCustomerName() {
@@ -45,7 +49,8 @@ public class CustomerModel {
 		this.password = password;
 	}
 	
-	
-
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "customermodel" )
+//	private List<CustomerAddress> address;
 }
 
